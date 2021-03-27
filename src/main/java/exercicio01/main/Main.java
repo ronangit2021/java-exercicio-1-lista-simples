@@ -19,21 +19,25 @@
             calcularValores(retorno);
             
             
-            switch (retorno[i]) {
+            for (int i=0; i< retorno.length; i++) {
+            	
+            	if (retorno[i]>= 70) {
+            		
+            		System.out.println("Valor muito alto. " );
             
-            case (retorno[i]>=50):
-            System.out.println("Valor muito alto");
-            break;
-            
-            
-            case (<=50): 
-                System.out.println("Valor normal");
-                break;
-                
+            	}else {
+            		
+            	System.out.println("Valor normal.");	
+            	}
+            	}
+            	
             }
-            }
+            
+            
         
-    } 
+            
+        
+    
             
         
         private int [] obterValores(int contagem, int valores[]){
@@ -62,7 +66,7 @@
                     maior = retorno[i];
                     
                 }
-                else((retorno[i] < maior)&(retorno[i] >= menor)){
+                else((retorno[i] < maior)&&(retorno[i] >= menor)){
                     
                     menor= retorno[i];
                 }
